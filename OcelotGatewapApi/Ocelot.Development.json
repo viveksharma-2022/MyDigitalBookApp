@@ -1,0 +1,75 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Author/GetAllBooks",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7069
+        }
+      ],
+      "UpstreamPathTemplate": "/api/getAllBooks",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/Author/AddBook",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7069
+        }
+      ],
+      "UpstreamPathTemplate": "/api/addNewBooks",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Author/UpdateBook",
+      "DownstreamScheme": "https",
+      "DownstreamHttpMethod": "Put",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7069
+        }
+      ],
+      "UpstreamPathTemplate": "/api/updateabook",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "downstreampathtemplate": "/api/User",
+      "downstreamscheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "downstreamhostandports": [
+        {
+          "host": "localhost",
+          "port": 7069
+        }
+      ],
+      "upstreampathtemplate": "/api/GetAllUser",
+      "upstreamhttpmethod": [ "get" ]
+
+    },
+    {
+      "downstreampathtemplate": "/api/Authentication",
+      "downstreamscheme": "https",
+      "DownstreamHttpMethod": "POST",
+      "downstreamhostandports": [
+        {
+          "host": "localhost",
+          "port": 7103
+        }
+      ],
+      "upstreampathtemplate": "/api/getValidateAuthentication",
+      "upstreamhttpmethod": [ "post" ]
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7297"
+  }
+}
